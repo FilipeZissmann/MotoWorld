@@ -4,28 +4,148 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MotoMachine</title>
+    <title>MotoWorld</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <header class="header">
         <section>
             <a href="#" class="logo">
-                <img width="50" height="50" src="https://img.icons8.com/ink/48/FFFFFF/piston.png" alt="piston"/>
+                <img class="logo-img" width="130" height="70" src="imagens/MotoWorldLogo.png" alt="piston" />
             </a>
             <nav class="navbar">
                 <a href="#">Home</a>
-                <a href="#">Produtos</a>
-                <a href="#">Sobre Nós</a>
-                <a href="#">Contato</a>
+                <a href="#">Peças</a>
+                <a href="#">Catálogos</a>
             </nav>
             <div class="icons">
-                <img width="50" height="50" src="https://img.icons8.com/ios-filled/50/FFFFFF/search--v2.png"
-                    alt="search--v2" />
+                <img class="search" width="50" height="50"
+                    src="https://img.icons8.com/ios-filled/50/FFFFFF/search--v2.png" alt="search--v2" />
             </div>
         </section>
     </header>
+    <div class="home-container">
+        <section>
+            <div class="slider">
+                <div class="slides">
+                    <!-- Radio buttons -->
+                    <input type="radio" name="radio-btn" id="radio1">
+                    <input type="radio" name="radio-btn" id="radio2">
+                    <input type="radio" name="radio-btn" id="radio3">
+                    <input type="radio" name="radio-btn" id="radio4">
+                    <!-- Fim Radio buttons -->
+
+                    <!--Slides videos-->
+                    <div class="slide first">
+                        <video width="640" height="360" controls autoplay muted loop>
+                            <source src="videos/video1.mp4">
+                        </video>
+                    </div>
+                    <div class="slide">
+                        <video width="640" height="360" controls autoplay muted loop>
+                            <source src="videos/video2.mp4">
+                        </video>
+                    </div>
+                    <div class="slide">
+                        <video width="640" height="360" controls autoplay muted loop>
+                            <source src="videos/video3.mp4">
+                        </video>
+                    </div>
+                    <div class="slide">
+                        <video width="640" height="360" controls autoplay muted loop>
+                            <source src="videos/video4.mp4">
+                        </video>
+                    </div>
+                    <!--Fim Slides videos-->
+
+                    <!--Navigation auto-->
+                    <div class="navigation-auto">
+                        <div class="auto-btn1"></div>
+                        <div class="auto-btn2"></div>
+                        <div class="auto-btn3"></div>
+                        <div class="auto-btn4"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="manual-navigation">
+                <label for="radio1" class="manual-btn"></label>
+                <label for="radio2" class="manual-btn"></label>
+                <label for="radio3" class="manual-btn"></label>
+                <label for="radio4" class="manual-btn"></label>
+            </div>
+            <div class="menu-news">
+                <!--Início dos MODAIS ✅-->
+                <div class="modal-container">
+                    <div class="modal">
+                        <div class="x">
+                        <img onclick="closeModal()" width="30" height="30" src="https://img.icons8.com/ios/50/FFFFFF/xbox-x.png" alt="xbox-x"/>
+                        </div>
+                        <img id="img-modal" src="" alt="modal img">
+                        <div class="content-modal">
+                            <h2>Novos escapamentos da Vortex</h2>
+                            <p>Novos escapamentos prometem revolucionar o desempenho das motos.</p>
+                        </div>
+                    </div>
+                </div>
+                <!--Fim do MODAL ❌-->
+                <div class="container-news">
+                    <h2>MotoWorld News</h2>
+                    <p>Fique por dentro das últimas novidades do mundo das motos, lançamentos, eventos e tendências.</p>
+                </div>
+                <!--Início do CONTAINER DE CARDS ✅-->
+                <div class="container-cards">
+                    <!--CARD 1-->
+                    <div class="card">
+                        <img src="imagens/EscapeVortex.png" alt="Lançamento de Moto Elétrica">
+                        <div class="info-card">
+                            <h3>Novos escapamentos da Vortex</h3>
+                            <p>Novos escapamentos prometem revolucionar o desempenho das motos.</p>
+                        </div>
+                        <div class="card-content">
+                            <a href="#" id="card1">
+                                <img width="30" height="30" src="https://img.icons8.com/ios/30/FFFFFF/visible--v1.png"
+                                    alt="visible--v1" />
+                            </a>
+                        </div>
+                    </div>
+                    <!--CARD 2-->
+                    <div class="card">
+                        <img src="imagens/card1.jpg" alt="Lançamento de Moto Elétrica">
+                        <div class="info-card">
+                            <h3>Novos escapamentos da Bronson</h3>
+                            <p>Novos escapamentos prometem revolucionar o desempenho das motos.</p>
+                        </div>
+                        <div class="card-content">
+                            <a href="#" id="card2">
+                                <img width="30" height="30" src="https://img.icons8.com/ios/30/FFFFFF/visible--v1.png"
+                                    alt="visible--v1" />
+                            </a>
+                        </div>
+                    </div>
+                    <!--CARD 3-->
+                    <div class="card">
+                        <img src="imagens/card1.jpg" alt="Lançamento de Moto Elétrica">
+                        <div class="info-card">
+                            <h3>Novos escapamentos da Bronson</h3>
+                            <p>Novos escapamentos prometem revolucionar o desempenho das motos.</p>
+                        </div>
+                        <div class="card-content">
+                            <a href="#">
+                                <img width="30" height="30" src="https://img.icons8.com/ios/30/FFFFFF/visible--v1.png"
+                                    alt="visible--v1" />
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!--FIM do CONTAINER DE CARDS ❌-->
+            </div>
+        </section>
+    </div>
+    <script src="script.js"></script>
 </body>
 
 </html>
