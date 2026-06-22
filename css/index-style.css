@@ -1,0 +1,365 @@
+/* Uso o seletor universal para aplicar algumas propriedades importantes a todos os elementos da página. */
+* { 
+    margin: 0; 
+    padding: 0; 
+    outline: none; 
+    border: none; 
+    text-decoration: none; 
+}
+
+/* A partir daqui aplico propriedade(s) no body, ou seja, na seção do html que usuário vê antes da adição de qualquer elemento.*/
+body {
+    background-color: black;
+}
+
+
+/* A partir daqui eu defino algumas propriedades gerais da tag section que vai aparecer no HEADER, MAIN e FOOTER */
+section {
+    padding: 20px 50px; 
+    margin: 0 auto;
+    max-width: 800px;
+}
+
+
+/* SEÇÃO HEADER DO SITE */
+
+.header {
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    right: 0; 
+    z-index: 99; 
+    background-color: black; 
+    border-bottom: 1px solid #fff; 
+}
+
+/* Aqui aplico propriedades na SECTION do HEADER que é um bloco ajuda a centralizar todo o conteúdo da página. */
+.header section {
+    display: flex;
+    align-items: center; 
+    justify-content: space-between; 
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.navbar a {
+    color: #fff;
+    font-family: "Rubik Mono One", monospace;
+    font-style: italic;
+    transition: 0.3s ease;
+}
+
+
+/* SEÇÃO MAIN DO SITE */
+
+.home-container { /* Aqui afasto um pouco do bloco da main do bloco HEADER para evitar que o carrosel de vídeos fique com topo escondido. */
+    margin-top: 7.5rem;
+}
+
+/* A partir daqui são as propriedades do SLIDER 🎠 */
+
+.slider { /* Essa classe .slider é o bloco principal do carrosel de vídeos, o tamanho dele está em equilibrado com o tamanho da section. */
+    margin: 0 auto; /* Essa propriedade centraliza o bloco no meio da página. */
+    width: 800px; /* Esse é o tamanho do bloco em que os vídeos passarão em carrosel que está do tamanho da section. */
+    height: 400px; /* Defini a altura do carrosel de vídeos. */
+    overflow: hidden; /* Com essa propriedade e valor eu garanto que o conteúdo do container não ultrapasse os limites do container. */
+}
+
+.slides { /* Essa classe é uma div dentro do slider que organiza os vídeos em uma fila para a direita. */
+    display: flex; /* Essa propriedade garante que os elementos dentro dessa div estejam em fila na horizontal para a direita. */
+    width: 400%; /* Nessa propriedade eu defino o tamanho dessa div, um tamanho 4x o tamanho do elemento pai dela que é o SLIDER. */
+    height: 400px; /* Nessa propriedade defino a altura igual a do SLIDER. */
+}
+
+.slides input { /* Dentro da div "slides" existem os 4 inputs que controlam o carrosel de vídeos. */
+    display: none; /* Eu uso o display com esse valor para fazê-los desaparecer do container e apresentar somente os vídeos, pois eu aciono os inputs através dos labels com "for".*/
+}
+
+.manual-navigation { /* Essa classe se refere ao container que contém os 4 labels que controlam os inputs.*/
+    position: absolute; /* Uso a posição absolute para posicionar esse container de labels em relação ao container "slides".*/
+    margin-top: -40px; /* Como esse container fica na borda logo abaixo, eu forço a entrada dele dentro do container usando um sinal negativo. */
+    width: 800px; /* Defino o tamanho desse menu conforme o tamanho do "slider". */
+    display: flex; /* Defino o display flex para fazer as bolinhas ficar na horizontal. */
+    justify-content: center; /* Uso essa propriedade aliada ao flex para centralizar na horizontal. */
+    gap: 20px; /* Crio um pequeno espaço entre as bolinhas para que elas não fiquem muito próximas. */
+
+}
+
+.manual-btn { /* Essa classe é destinada a estilizar as bolinhas (labels) que controlam os inputs para a troca dos vídeos. */
+    border: 2px solid #fff; 
+    padding: 5px; /* Com essa propriedade aumento o diamêtro das bolinhas da label. */
+    border-radius: 10px; /* Com essa propriedade deixo a label arredondada. */
+    cursor: pointer; /* Faço o cursor mostrar que o elemento é clicável. */
+    transition: 1s; /* Uso essa propriedade para tornar a transição no hover mais suave. */
+}
+
+.manual-btn:hover { /* Essa classe recebe uma propriedade quando o usuário passa o mouse por cima.*/
+    background-color: #fff; /* A bolinha é prenchida com um cor branca com 1s de animação. */
+}
+
+/* A partir daqui criei uma manipulação em CSS para manipular a classe correspondente ao vídeo 1 do carrosel. */
+
+#radio1:checked~.first { /* Quando o usuário clicar na label com for rádio1 (primeira bolinha), o input com id radio1 será "checked" e será aplicada a propriedade entre as chaves. */
+    margin-left: 0;
+}
+
+#radio2:checked~.first { 
+    /* Quando o usuário clicar na label com for rádio1 (primeira bolinha), o input com id radio1 ficará "checked" 
+    e será aplicada a propriedade entre as chaves. Ou seja, o vídeo com classe .first será deslocado para a esquerda colocando o vídeo 2 em evidência.*/
+    margin-left: -25%;
+}
+
+#radio3:checked~.first {
+    /* Quando o usuário clicar na label com for rádio1 (primeira bolinha), o input com id radio1 ficará "checked" 
+    e será aplicada a propriedade entre as chaves. Ou seja, o vídeo com classe .first será deslocado para a esquerda colocando o vídeo 3 em evidência.*/
+    margin-left: -50%;
+}
+
+#radio4:checked~.first {
+    /* Quando o usuário clicar na label com for rádio1 (primeira bolinha), o input com id radio1 ficará "checked" 
+    e será aplicada a propriedade entre as chaves. Ou seja, o vídeo com classe .first será deslocado para a esquerda colocando o vídeo 4 em evidência.*/
+    margin-left: -75%;
+    /* NOTA: quando usuário faz o processo inverso a fita de vídeos é "rebobinada" gerando o efeito. */
+}
+
+.slide video { /* Essa classe usa propriedades apenas para deixar o vídeo do tamanho do seu container "slides". */
+    width: 800px;
+    height: 400px;
+    position: relative;
+}
+
+/* A partir daqui são as propriedades aplicadas ao menu "NOTÍCIAS" e "ARTIGOS" */
+
+.menu-news { /* Essa classe é o bloco "container maior da seção de notícia onde existem 3 cards. */
+    height: 400px; /* Defino o tamanho desse bloco igual ao tamanho do SLIDER para preservar as proporções. */
+    margin-top: 20px; /* Aqui crio um distânciano topo em relação ao container do SLIDER. */
+}
+
+.header-section { /* Essa classe é para posicionar o título da seção "NOTÍCIAS" e "ARTIGOS". */
+    padding-left: 1rem;
+}
+
+/* A partir daqui aplico algumas propriedades para estilizar os dois elementos que estão container "header-section" no topo de NOTÍCIAS E ARTIGOS. */
+.header-section h2 { 
+    color: #fff;
+    font-family: "Rubik Mono One", monospace;
+    font-size: 20px;
+    font-weight: 300;
+    font-style: italic;
+}
+
+.header-section p {
+    margin-top: 5px;
+    color: #fff;
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+    font-weight: 100;
+}
+
+/* Finalizo aqui as propriedades para estilizar os dois elementos de texto desse "container-news". */
+
+.container-cards { /* Através dessa classe crio um bloco para conter os 3 cards de cada seção, tanto de NOTÍCIAS quanto ARTIGOS. */ 
+    height: 350px; /* Defino um tamanho um pouco menor que o container principal o "menu-news". */
+    display: flex; /* Coloco os cards em alinhados na horizontal. */
+    justify-content: center; /* Centralizo na horizontal. */
+    align-items: center; /* Centralizo os cards na vertical */
+    gap: 20px; /*Crio uma pequena distância entre eles. */
+}
+
+.card { /* Essa classe estiliza os cards das duas seções: "NOTÍCIAS" e "ARTIGOS". */
+    display: flex;
+    flex-direction: column; /* Com essa propriedade faço todos os conteúdos do card ficar na vertical. */
+    border: 1px solid #fff;
+    width: 30%; /* Essa propriedade faz o tamanho dos cards ficar menores na horizontal, 30% do tamanho da tag pai que é o "container-cards". */
+    height: 85%; /* Essa propriedade faz o tamanho dos cards ficar maiores, 85% do tamanho da tag pai que é o "container-cards". */
+    border-radius: 10px; /* Dá uma arredondada nas bordas dos cards. */
+}
+
+.card img { /* Com essa classe eu defino o tamanho das imagens dentro dos cards da página. */
+    width: 100%; /* Com essa propriedade faço a imagem preencher 100% o cartão na horizontal. */
+    height: 45%; /* Com essa propriedade faço a imagem preencher um espaço menor de 45% no card para sobrar mais espaço para os conteúdos restantes. */
+    object-fit: cover; /* Essa propriedade eu uso para a imagem não distorcer e por ser alta qualidade, quando for reduzida se adequar com qualidade. */
+    border-radius: 10px; /* Como a borda da imagem é quadrada, faço ela ficar arredondada acompanhando o formato do card.*/
+}
+
+.info-card { /* Com essa classe defino o tamanho e cor do bloco que contém os textos dentro do card. */
+    height: 40%;
+    background-color: #1a6eb8;
+}
+
+.info-card h3 { /* Essa classe estiliza a tag h3 dentro dos cards.*/
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    padding-left: 10px;
+    padding-top: 10px;
+    color: #fff;
+}
+
+.info-card p { /* Essa classe estiliza a tag p dentro dos cards. */
+    font-family: "Poppins", sans-serif;
+    text-align: start;
+    font-size: 14px;
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-right: 10px;
+    color: #fff;
+}
+
+
+.card-content { /* Com essa classe ajusto o último bloco que contém o icone de olhos do card e texto "Ver artigo". */
+    display: flex;
+    align-items: center;
+    padding-left: 15px;
+    height: 15%;
+    border-radius: 10px;
+    color: #fff;
+    font-family: "Poppins", sans-serif;
+}
+
+.menu-articles { /* Com essa classe apenas crio um espaço entre a div do menu "NOTÍCIAS" e do menu "ARTIGOS". */
+    margin-top: 20px;
+}
+
+/* A PARTIR DAQUI SÂO TODAS AS PROPRIEDADES APLICADAS AO MODAL/POP-UP*/
+
+
+.modal-container { /* Essa classe é destinada a criar um fundo levemente escuro para colocar em evidência o Modal. */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: none; /* Inicialmente sem qualquer interação na página esse container fica invisível. */
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; /* Aqui eu coloco esse container acima de todos os outros elementos da página. */
+    overflow-y: auto; /* Com essa propriedade eu torno automático o tamanho de scroll necessário para visualizar o conteúdo do pop-up. */
+}
+
+.modal { /* Essa classe estiliza a caixa com o conteúdo do Modal quando o card é clicado no menu "NOTÍCIAS". */
+    margin-top: auto; 
+    margin-bottom: auto;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-color: #0B0D0E;
+    padding: 20px;
+    border-radius: 10px;
+    width: 800px;
+    height: auto;
+}
+
+#img-modal { /* Nessa "classe" ajusto o tamanho da imagem no modal pra que haja responsividade dependendo da altura da imagem. */
+    margin-bottom: 30px;
+    width: 100%;
+    max-height: 50rem;
+    object-fit: contain; /* Essa propriedade ajusta a imagem de maneira a manter as proporções dela no container quando diminuida ou aumentada. */
+}
+
+
+.modal h2 { /* Ajuste na cor da tag de texto h2 e separação dela do texto abaixo do modal. */
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.modal p { /* Ajuste na cor tag de texto p do modal. */
+    color: #fff;
+}
+
+.content-modal { /* Usei display flex nesse caso somente para alinhar na horizontal com justify. */
+    display: flex;
+    height: auto;
+    justify-content: center;
+}
+
+/* A partir daqui é um ajuste de padding do texto que está dentro do pop up. */
+.modaltext-container {
+    padding: 20px;
+}
+
+/* A partir daqui é um ajuste para centralizar o texto da caixa que informa o review do lançamento e o ícone do youtube. */
+.youtube-modal {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff0ff;
+    font-size: 20px;
+    width: 20rem;
+    height: 10rem;
+    border: 1px solid white;
+}
+
+.active { /* Essa é a classe que ativa o pop-up via função no JavaScript. */
+    display: flex;
+}
+
+body.modal-aberto {/* Essa classe é ativada via função no JavaScript para retirar o scroll do body pós abertura do pop-up.*/
+  overflow: hidden;
+}
+
+.x { /* Essa classe é destinada a estilizar o botão de sair do modal. */
+    padding: 5px;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: end;
+}
+
+/* A PARTIR DAQUI SÃO AS PROPRIEDADES APLICADAS AO FOOTER DO SITE */
+
+.footer {
+    border-top: 1px solid white;
+    background-color: #000000;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: auto;
+}
+
+.footer section {
+    display: flex;
+    padding-left: 8%;
+}
+
+.socialmedia-container {
+    width: 60%;
+    height: 5rem;
+}
+
+.socialmedia-container h1 {
+    color: #fff;
+    font-family: "Rubik Mono One", monospace;
+    font-size: 15px;
+    text-align: start;
+}
+
+.socialmedia-icons {
+    margin-top: 10px;
+    display: flex;
+    justify-content: flex-start;
+    gap: 20px;
+}
+
+.contact-container {
+    width: 200px;
+    height: 100px;
+}
+
+.contact-container h1 {
+    color: #fff;
+    font-family: "Rubik Mono One", monospace;
+    font-size: 15px;
+}
+
+.contact-container p {
+    color: #fff;
+    font-family: "Poppins", sans-serif;
+    font-size: 20px;
+}
+

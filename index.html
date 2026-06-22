@@ -5,98 +5,100 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MotoWorld</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/index-style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap" rel="stylesheet">
 </head>
 
 <body>
+    <!--HEADER: bloco fixo no topo com menu de navegação.-->
     <header class="header">
         <section>
+            <!--Logo do header-->
             <a href="#" class="logo">
-                <img class="logo-img" width="130" height="70" src="imagens/MotoWorldLogo.png" alt="piston" />
+                <img class="logo-img" width="130" height="70" src="imagens/MotoWorldLogo.png" alt="logo" />
             </a>
+             <!--Menu de navegação do header-->
             <nav class="navbar">
                 <a href="#">Home</a>
-                <a href="#">Peças</a>
-                <a href="#">Catálogos</a>
+                <a href="pages/page1.html">Peças</a>
+                <a href="pages/page2.html">Catálogos</a>
             </nav>
-            <div class="icons">
-                <img class="search" width="50" height="50"
-                    src="https://img.icons8.com/ios-filled/50/FFFFFF/search--v2.png" alt="search--v2" />
-            </div>
         </section>
     </header>
-    <div class="home-container">
+    <!--MAIN: bloco com o conteúdo do site: carrosel de vídeos (slider), cards etc... etc...-->
+    <main class="home-container">
         <section>
+            <!--SLIDER (carrosel)-->
             <div class="slider">
+                <!--Container com os vídeos em fila para a direita-->
                 <div class="slides">
-                    <!-- Radio buttons -->
+                    <!--Botões tipo radio -->
                     <input type="radio" name="radio-btn" id="radio1">
                     <input type="radio" name="radio-btn" id="radio2">
                     <input type="radio" name="radio-btn" id="radio3">
                     <input type="radio" name="radio-btn" id="radio4">
-                    <!-- Fim Radio buttons -->
 
-                    <!--Slides videos-->
+                    <!--Vídeos do carrosel-->
                     <div class="slide first">
-                        <video width="640" height="360" controls autoplay muted loop>
+                        <video width="" height="" controls autoplay muted loop>
                             <source src="videos/video1.mp4">
                         </video>
                     </div>
                     <div class="slide">
-                        <video width="640" height="360" controls autoplay muted loop>
+                        <video width="" height="" controls autoplay muted loop>
                             <source src="videos/video2.mp4">
                         </video>
                     </div>
                     <div class="slide">
-                        <video width="640" height="360" controls autoplay muted loop>
+                        <video width="" height="" controls autoplay muted loop>
                             <source src="videos/video3.mp4">
                         </video>
                     </div>
                     <div class="slide">
-                        <video width="640" height="360" controls autoplay muted loop>
+                        <video width="" height="" controls autoplay muted loop>
                             <source src="videos/video4.mp4">
                         </video>
                     </div>
-                    <!--Fim Slides videos-->
-
-                    <!--Navigation auto-->
-                    <div class="navigation-auto">
-                        <div class="auto-btn1"></div>
-                        <div class="auto-btn2"></div>
-                        <div class="auto-btn3"></div>
-                        <div class="auto-btn4"></div>
-                    </div>
+                </div>
+                <!--Bolinhas presentes no container do carrosel de vídeos-->
+                <div class="manual-navigation">
+                    <label for="radio1" class="manual-btn"></label>
+                    <label for="radio2" class="manual-btn"></label>
+                    <label for="radio3" class="manual-btn"></label>
+                    <label for="radio4" class="manual-btn"></label>
                 </div>
             </div>
-            <div class="manual-navigation">
-                <label for="radio1" class="manual-btn"></label>
-                <label for="radio2" class="manual-btn"></label>
-                <label for="radio3" class="manual-btn"></label>
-                <label for="radio4" class="manual-btn"></label>
-            </div>
+            <!--MENU NOTÍCIAS-->
             <div class="menu-news">
-                <!--Início dos MODAIS ✅-->
+                <!--Container do Modal/Pop-Up visível na interação com os cards desse menu-->
                 <div class="modal-container">
                     <div class="modal">
                         <div class="x">
-                        <img onclick="closeModal()" width="30" height="30" src="https://img.icons8.com/ios/50/FFFFFF/xbox-x.png" alt="xbox-x"/>
+                            <img onclick="closeModal()" width="30" height="30"
+                                src="https://img.icons8.com/ios/50/FFFFFF/xbox-x.png" alt="xbox-x" />
                         </div>
                         <img id="img-modal" src="" alt="modal img">
                         <div class="content-modal">
+                            <div class="modaltext-container">
                             <h2>Novos escapamentos da Vortex</h2>
                             <p>Novos escapamentos prometem revolucionar o desempenho das motos.</p>
+                            </div>
+                            <a href="https://www.youtube.com/">
+                            <div class="youtube-modal">Review on Youtube Channel
+                                <img width="48" height="48" src="https://img.icons8.com/color/48/youtube-play.png" alt="youtube-play"/>
+                            </div>
+                            </a>
                         </div>
                     </div>
                 </div>
-                <!--Fim do MODAL ❌-->
-                <div class="container-news">
-                    <h2>MotoWorld News</h2>
+                <!--Div referente ao título e subtítulo do menu "NOTÍCIAS"-->
+                <div class="header-section">
+                    <h2>Notícias</h2>
                     <p>Fique por dentro das últimas novidades do mundo das motos, lançamentos, eventos e tendências.</p>
                 </div>
-                <!--Início do CONTAINER DE CARDS ✅-->
+                <!--Container com os cards do menu "NOTÍCIAS"-->
                 <div class="container-cards">
                     <!--CARD 1-->
                     <div class="card">
@@ -114,9 +116,9 @@
                     </div>
                     <!--CARD 2-->
                     <div class="card">
-                        <img src="imagens/card1.jpg" alt="Lançamento de Moto Elétrica">
+                        <img src="imagens/AetherMotors.png" alt="Lançamento de Moto Elétrica">
                         <div class="info-card">
-                            <h3>Novos escapamentos da Bronson</h3>
+                            <h3>Arther com novo design em sua linha de rodas</h3>
                             <p>Novos escapamentos prometem revolucionar o desempenho das motos.</p>
                         </div>
                         <div class="card-content">
@@ -128,24 +130,94 @@
                     </div>
                     <!--CARD 3-->
                     <div class="card">
-                        <img src="imagens/card1.jpg" alt="Lançamento de Moto Elétrica">
+                        <img src="imagens/Volted.png" alt="Lançamento de Moto Elétrica">
                         <div class="info-card">
-                            <h3>Novos escapamentos da Bronson</h3>
-                            <p>Novos escapamentos prometem revolucionar o desempenho das motos.</p>
+                            <h3>Lançamento VTX PRO</h3>
+                            <p>Volted inova com capacete que promete maior resistência e segurança que outros modelos.
+                            </p>
                         </div>
                         <div class="card-content">
-                            <a href="#">
+                            <a href="#" id="card3">
                                 <img width="30" height="30" src="https://img.icons8.com/ios/30/FFFFFF/visible--v1.png"
                                     alt="visible--v1" />
                             </a>
                         </div>
                     </div>
                 </div>
-                <!--FIM do CONTAINER DE CARDS ❌-->
+            </div>
+            <!--MENU ARTIGOS-->
+            <div class="menu-articles">
+                <!--Div referente ao título e subtítulo do menu "ARTIGOS"-->
+                <div class="header-section">
+                    <h2>Artigos</h2>
+                    <p>Acompanhe as principais atualizações em componentes de motocicletas, avanços tecnológicos,
+                        processos de manutenção e tendências do setor automotivo.</p>
+                </div>
+                <!--Container com os cards do menu "NOTÍCIAS"-->
+                <div class="container-cards">
+                    <!--CARD 1-->
+                    <div class="card">
+                        <img src="imagens/Estator.png" alt="Lançamento de Moto Elétrica">
+                        <div class="info-card">
+                            <h3>Estatores</h3>
+                            <p>Tudo que você precisa saber sobre estatores. Desde compra, instalação e manutenção.</p>
+                        </div>
+                        <div class="card-content">
+                            <a href="#">Ver artigo</a>
+                        </div>
+                    </div>
+                    <!--CARD 2-->
+                    <div class="card">
+                        <img src="imagens/Coroa.png" alt="Lançamento de Moto Elétrica">
+                        <div class="info-card">
+                            <h3>Coroas e Correntes</h3>
+                            <p>Tudo o que você precisa saber sobre coroas. Desde compra, instalação e manutenção.</p>
+                        </div>
+                        <div class="card-content">
+                            <a href="#">Ver artigo</a>
+                        </div>
+                    </div>
+                    <!--CARD 3-->
+                    <div class="card">
+                        <img src="imagens/Guidao.png" alt="Lançamento de Moto Elétrica">
+                        <div class="info-card">
+                            <h3>Guidão</h3>
+                            <p>Tudo o que você precisa saber sobre guidãos. Desde compra, instalação e manutenção.</p>
+                        </div>
+                        <div class="card-content">
+                            <a href="#">Ver artigo</a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
-    </div>
-    <script src="script.js"></script>
+    </main>
+    <!--FOOTER: bloco com informações de contato do site e redes sociais...-->
+    <footer class="footer">
+        <section>
+            <!--Container com o convite e ícones para seguir nas redes sociais-->
+            <div class="socialmedia-container">
+                <h1>Acompanhe a MotoWorld:</h1>
+                <div class="socialmedia-icons">
+                    <a href="https://www.instagram.com/#">
+                        <img width="50" height="50" src="https://img.icons8.com/ios/50/FFFFFF/instagram-new--v1.png"
+                            alt="instagram-new--v1" /> </a>
+                    <a href="https://x.com/">
+                        <img width="50" height="50" src="https://img.icons8.com/ios/50/FFFFFF/twitterx--v2.png"
+                            alt="twitterx--v2" /> </a>
+                    <a href="https://www.youtube.com/">
+                        <img width="50" height="50" src="https://img.icons8.com/ios-filled/50/FFFFFF/youtube-play.png"
+                            alt="youtube-play" /> </a>
+                </div>
+            </div>
+            <!--Container com o email de contato do site-->
+            <div class="contact-container">
+                <h1>Contato:</h1>
+                <p>motoworld@gmail.com.br</p>
+            </div>
+        </section>
+    </footer>
+    <script src="js/index-script.js"></script>
 </body>
 
 </html>
