@@ -15,9 +15,9 @@ body {
 
 /* A partir daqui eu defino algumas propriedades gerais da tag section que vai aparecer no HEADER, MAIN e FOOTER */
 section {
-    padding: 20px 50px; 
+    padding: 1.25rem 3.125rem; 
     margin: 0 auto;
-    max-width: 800px;
+    max-width: 50rem;
 }
 
 
@@ -43,7 +43,7 @@ section {
 .navbar {
     display: flex;
     align-items: center;
-    gap: 50px;
+    gap: 3.125rem;
 }
 
 .navbar a {
@@ -64,15 +64,15 @@ section {
 
 .slider { /* Essa classe .slider é o bloco principal do carrosel de vídeos, o tamanho dele está em equilibrado com o tamanho da section. */
     margin: 0 auto; /* Essa propriedade centraliza o bloco no meio da página. */
-    width: 800px; /* Esse é o tamanho do bloco em que os vídeos passarão em carrosel que está do tamanho da section. */
-    height: 400px; /* Defini a altura do carrosel de vídeos. */
+    width: 50rem; /* Esse é o tamanho do bloco em que os vídeos passarão em carrosel que está do tamanho da section. */
+    height: 25rem; /* Defini a altura do carrosel de vídeos. */
     overflow: hidden; /* Com essa propriedade e valor eu garanto que o conteúdo do container não ultrapasse os limites do container. */
 }
 
 .slides { /* Essa classe é uma div dentro do slider que organiza os vídeos em uma fila para a direita. */
     display: flex; /* Essa propriedade garante que os elementos dentro dessa div estejam em fila na horizontal para a direita. */
     width: 400%; /* Nessa propriedade eu defino o tamanho dessa div, um tamanho 4x o tamanho do elemento pai dela que é o SLIDER. */
-    height: 400px; /* Nessa propriedade defino a altura igual a do SLIDER. */
+    height: 25rem; /* Nessa propriedade defino a altura igual a do SLIDER. */
 }
 
 .slides input { /* Dentro da div "slides" existem os 4 inputs que controlam o carrosel de vídeos. */
@@ -81,11 +81,11 @@ section {
 
 .manual-navigation { /* Essa classe se refere ao container que contém os 4 labels que controlam os inputs.*/
     position: absolute; /* Uso a posição absolute para posicionar esse container de labels em relação ao container "slides".*/
-    margin-top: -40px; /* Como esse container fica na borda logo abaixo, eu forço a entrada dele dentro do container usando um sinal negativo. */
-    width: 800px; /* Defino o tamanho desse menu conforme o tamanho do "slider". */
+    margin-top: -2.5rem; /* Como esse container fica na borda logo abaixo, eu forço a entrada dele dentro do container usando um sinal negativo. */
+    width: 50rem; /* Defino o tamanho desse menu conforme o tamanho do "slider". */
     display: flex; /* Defino o display flex para fazer as bolinhas ficar na horizontal. */
     justify-content: center; /* Uso essa propriedade aliada ao flex para centralizar na horizontal. */
-    gap: 20px; /* Crio um pequeno espaço entre as bolinhas para que elas não fiquem muito próximas. */
+    gap: 1.25rem; /* Crio um pequeno espaço entre as bolinhas para que elas não fiquem muito próximas. */
 
 }
 
@@ -127,16 +127,16 @@ section {
 }
 
 .slide video { /* Essa classe usa propriedades apenas para deixar o vídeo do tamanho do seu container "slides". */
-    width: 800px;
-    height: 400px;
+    width: 50rem;
+    height: 25rem;
     position: relative;
 }
 
 /* A partir daqui são as propriedades aplicadas ao menu "NOTÍCIAS" e "ARTIGOS" */
 
 .menu-news { /* Essa classe é o bloco "container maior da seção de notícia onde existem 3 cards. */
-    height: 400px; /* Defino o tamanho desse bloco igual ao tamanho do SLIDER para preservar as proporções. */
-    margin-top: 20px; /* Aqui crio um distânciano topo em relação ao container do SLIDER. */
+    height: 25rem; /* Defino o tamanho desse bloco igual ao tamanho do SLIDER para preservar as proporções. */
+    margin-top: 1.25rem; /* Aqui crio um distânciano topo em relação ao container do SLIDER. */
 }
 
 .header-section { /* Essa classe é para posicionar o título da seção "NOTÍCIAS" e "ARTIGOS". */
@@ -163,7 +163,7 @@ section {
 /* Finalizo aqui as propriedades para estilizar os dois elementos de texto desse "container-news". */
 
 .container-cards { /* Através dessa classe crio um bloco para conter os 3 cards de cada seção, tanto de NOTÍCIAS quanto ARTIGOS. */ 
-    height: 350px; /* Defino um tamanho um pouco menor que o container principal o "menu-news". */
+    height: 25rem; /* Defino um tamanho um pouco menor que o container principal o "menu-news". */
     display: flex; /* Coloco os cards em alinhados na horizontal. */
     justify-content: center; /* Centralizo na horizontal. */
     align-items: center; /* Centralizo os cards na vertical */
