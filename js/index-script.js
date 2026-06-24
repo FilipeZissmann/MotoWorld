@@ -46,17 +46,19 @@ function alterarTexto(titulo, texto) {
 }
 
 
-card1.addEventListener("click", () => openModal(imagenscard1));
-card2.addEventListener("click", () => openModal(imagenscard2));
-card3.addEventListener("click", () => openModal(imagenscard3));
-card1.addEventListener('click', () => {
-    alterarTexto('Novos escapamentos da Vortex', 'Novos escapamentos prometem revolucionar o desempenho das motos.');
+/* A partir daqui são todos os eventos que acionam funções. */
+
+card1.addEventListener("click", () => openModal(imagenscard1)); // Evento de quando clica no card1 acionar a função que abre o modal com um parâmetro
+card2.addEventListener("click", () => openModal(imagenscard2)); // Evento de quando clica no card2 acionar a função que abre o modal com um parâmetro
+card3.addEventListener("click", () => openModal(imagenscard3)); // Evento de quando clica no card3 acionar a função que abre o modal com um parâmetro
+card1.addEventListener('click', () => { // Evento de quando clicar no card1 atualizar o conteúdo de texto
+    alterarTexto('Novos escapamentos da Vortex', 'A Vortex surpreendeu o mercado automotivo com o lançamento de seus novos escapamentos, projetados para unir desempenho e estilo em um só produto. Com linhas modernas e acabamento premium, eles prometem não apenas aumentar a eficiência do fluxo de gases, mas também oferecer um ronco esportivo inconfundível, capaz de transformar qualquer veículo em uma verdadeira máquina de personalidade. Assista o review em nosso canal do youtube.');
 });
-card2.addEventListener('click', () => {
-    alterarTexto('Arther com novo design em sua linha de rodas', 'Arther surpreende mercado com rodas foscas estilo anos 70.');
+card2.addEventListener('click', () => { // Evento de quando clicar no card2 atualizar o conteúdo de texto
+    alterarTexto('Aether com novo design em sua linha de rodas', 'A Aether apresentou um novo design em sua linha de rodas, trazendo um visual ousado e sofisticado que promete redefinir o padrão de estilo automotivo. As novas rodas combinam leveza estrutural com resistência avançada, resultado de um processo de fabricação inovador que privilegia tanto a estética quanto a performance. Assista o review em nosso canal do youtube.');
 });
-card3.addEventListener('click', () => {
-    alterarTexto('Lançamento VTX PRO', 'Volted inova com capacete que promete maior resistência e segurança que outros modelos.');
+card3.addEventListener('click', () => { // Evento de quando clicar no card3 atualizar o conteúdo de texto
+    alterarTexto('Lançamento VTX PRO', 'A Volted acaba de anunciar um capacete revolucionário que promete elevar os padrões de resistência e segurança no mercado. Desenvolvido com materiais de última geração e tecnologia de absorção de impacto aprimorada, o modelo oferece proteção superior sem abrir mão do conforto e da leveza. Assista o review em nosso canal do youtube.');
 });
 
 

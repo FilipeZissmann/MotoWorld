@@ -1,3 +1,6 @@
+/* Esse bloco inicial de estilos eu repeti para ter liberdade de alterar o layout do header da segunda página,
+mas ele carrega os mesmos estilos da página home. */
+
 * {
     margin: 0;
     padding: 0;
@@ -10,7 +13,7 @@ body {
     background-color: black;
 }
 
-.header {
+.header { 
     position: fixed;
     top: 0;
     left: 0;
@@ -35,6 +38,8 @@ section {
 .logo {
     margin-left: 2rem;
 }
+
+/* Aqui começo a estilizar o form. */
 
 form {
     height: auto;
@@ -66,6 +71,8 @@ form button {
     height: 2rem;
 }
 
+/* A partir daqui repito os mesmos estilos dos cartões da página home, mas com algumas alterações de largura e comprimento. */
+
 .container-cards {
     display: flex;
     flex-wrap: wrap;
@@ -73,7 +80,6 @@ form button {
     height: auto;
 }
 
-/**/
 
 .card {
     border: 1px solid #fff;
@@ -140,3 +146,101 @@ form button {
     color: #fff;
     font-family: "San", sans-serif;
 }
+
+.modal-container { /* Essa classe é destinada a criar um fundo levemente escuro para colocar em evidência o Modal. */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: none; /* Inicialmente sem qualquer interação na página esse container fica invisível. */
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; /* Aqui eu coloco esse container acima de todos os outros elementos da página. */
+    overflow-y: auto; /* Com essa propriedade eu torno automático o tamanho de scroll necessário para visualizar o conteúdo do pop-up. */
+}
+
+.modal { /* Essa classe estiliza a caixa com o conteúdo do Modal quando o card é clicado no menu "NOTÍCIAS". */
+    margin-top: auto; 
+    margin-bottom: auto;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-color: #0B0D0E;
+    padding: 20px;
+    border-radius: 10px;
+    width: 800px;
+    height: auto;
+}
+
+.x { /* Essa classe é destinada a estilizar o botão de sair do modal. */
+    padding: 5px;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: end;
+}
+
+.x:hover { /* Quando o cursor passar por cima do x ele mudará para pointer. */
+    cursor: pointer;
+}
+
+#img-modal { /* Nessa "classe" ajusto o tamanho da imagem no modal pra que haja responsividade dependendo da altura da imagem. */
+    margin-bottom: 30px;
+    width: 100%;
+    max-height: 50rem;
+    object-fit: contain; /* Essa propriedade ajusta a imagem de maneira a manter as proporções dela no container quando diminuida ou aumentada. */
+}
+
+.content-modal { /* Usei display flex nesse caso somente para alinhar na horizontal com justify. */
+    display: flex;
+    height: auto;
+    justify-content: center;
+}
+
+/* A partir daqui é um ajuste de padding do texto que está dentro do pop up. */
+.modaltext-container {
+    padding: 20px;
+    padding-top: 0;
+}
+
+.modal h1 { /* Ajuste na cor da tag de texto h2 e separação dela do texto abaixo do modal. */
+    font-family: "Poppins", sans-serif;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.modal h2 {
+    font-family: "Poppins", sans-serif;
+    color: #fff;
+}
+
+.modal p { /* Ajuste na cor tag de texto p do modal. */
+    font-family: "Poppins", sans-serif;
+    color: #fff;
+}
+
+.modal span {
+    font-weight: normal;
+    color: #fff;
+}
+
+/* A partir daqui é um ajuste para centralizar o texto da caixa que informa o review do lançamento e o ícone do youtube. */
+.youtube-modal {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 20rem;
+    height: 10rem;
+    border: 1px solid white;
+}
+
+.active { /* Essa é a classe que ativa o pop-up via função no JavaScript. */
+    display: flex;
+}
+
+body.modal-aberto {/* Essa classe é ativada via função no JavaScript para retirar o scroll do body pós abertura do pop-up.*/
+  overflow: hidden;
+}
+

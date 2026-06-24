@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    <!--HEADER-->
+    <!--HEADER: Nessa página o header terá um form para pesquisa de peças.-->
     <header class="header">
         <section>
             <a href="index.html" class="logo">
@@ -23,11 +23,33 @@
             </form>
         </section>
     </header>
-    <!--MAIN-->
+    <!--MAIN: Nessa página o container é apenas o bloco no qual serão distribuidos os cards através do JavaScript-->
     <main>
         <section>
+            <!--MODAL que também está presente na página home aparece aqui novamente gerando informção sobre as peças-->
+            <div class="modal-container">
+                <div class="modal">
+                    <div class="x" onClick="closeModal()">
+                        <img onclick="closeModal()" width="30" height="30"
+                            src="https://img.icons8.com/ios/50/FFFFFF/xbox-x.png" alt="xbox-x" />
+                    </div>
+                    <div class="content-modal">
+                        <div class="modaltext-container">
+                            <h1>Informações da peça</h1>
+                            <h2>Referências:<span> X</span></h2>
+                            <h2>Categoria:<span> X</span></h2>
+                            <h2>Compatibilidade:<span> X</span></h2>
+                            <br>
+                            <h2>Tutorial de instalação:</h2>
+                            <video width="720" height="480" controls autoplay muted loop>
+                                <source src="videos/Preview.mp4">
+                                </video>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div class="container-cards" id="containerCards">
-                
+
             </div>
         </section>
     </main>
